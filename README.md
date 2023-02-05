@@ -23,5 +23,5 @@ Files to mess around with:
 9. Install with `|install our %clibox`.
 10. Link the command line app with `|link %clibox`.
 11. Switch through command line apps with `Ctrl+X` until you see the `~zod:clibox` prompt.
-12. Type `add ~zod` and hit `ENTER` to add a `~zod` to a list of ships in the state.
+12. Type `add ~zod` and hit `ENTER` to add `~zod` to a list of ships in the state.
 13. Type `lis` and hit `ENTER` to print the list of ships to the terminal.
