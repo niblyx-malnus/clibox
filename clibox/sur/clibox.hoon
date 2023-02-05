@@ -1,12 +1,6 @@
 |%
 +$  data  ships=(list ship)
 ::
-+$  action
-  $%  [%do-a-thing ~]
-      [%do-another ~]
-      [%add-a-ship =ship]
-  ==
-::
 +$  command
   $?  [%do-a-thing ~]
       [%do-another ~]

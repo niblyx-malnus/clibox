@@ -36,24 +36,7 @@
   =/  old=state-0  !<(state-0 ole)
   [~ this(state old)]
 ::
-++  on-poke
-  |=  [=mark =vase]
-  ^-  (quip card _this)
-  ?+    mark  (on-poke:def mark vase)
-      %clibox-action
-    =/  axn  !<(action vase)
-    ?-    -.axn
-        %do-a-thing
-      ~&  "Do a thing..."
-      `this
-        %do-another
-      ~&  "Do another..."
-      `this
-        %add-a-ship
-      ~&  "Adding ship..."
-      `this(ships [ship.axn ships])
-    ==
-  ==
+++  on-poke  on-poke:def
 ++  on-watch  on-watch:def
 ++  on-leave  on-leave:def
 ++  on-peek   on-peek:def
@@ -75,20 +58,22 @@
 ++  on-command
   |=  [=sole-id =command]
   ^-  (quip card _this)
-  =;  cards=(list card)
-    [cards this]
   ?-    -.command
       %do-a-thing
-    [%pass / %agent [our dap]:bowl %poke clibox-action+!>(command)]~
+    ~&  "Do a thing..."
+    `this
     ::
       %do-another
-    [%pass / %agent [our dap]:bowl %poke clibox-action+!>(command)]~
+    ~&  "Do another..."
+    `this
     ::
       %list-ships
+    :_  this
     (print-green-cards (turn ships |=(=ship (scot %p ship))))
     ::
       %add-a-ship
-    [%pass / %agent [our dap]:bowl %poke clibox-action+!>(command)]~
+    ~&  "Adding ship..."
+    `this(ships [ship.command ships])
   ==
 ::
 ++  can-connect  |=(=sole-id `?`=(our.bowl src.bowl))
