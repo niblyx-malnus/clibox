@@ -5,7 +5,7 @@ a simple CLI skeleton and sandbox to get started with urbit CLIs
 - Learn more about parsing commands with Hoon [here](https://developers.urbit.org/guides/additional/parsing).
 - Learn more about the terminal driver vane `%dill` [here](https://developers.urbit.org/reference/arvo/dill/dill)
 
-Files to mess around with:vi
+Files to mess around with:
 
 - `/app/clibox.hoon`
 - `/sur/clibox.hoon`
